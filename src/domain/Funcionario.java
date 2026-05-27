@@ -1,16 +1,22 @@
 package domain;
+import enums.Cargo;
 
-public abstract class Funcionario {
+public abstract class Funcionario  {
     private String name;
     private double salarioBase;
     private String departamento;
-    private String Cargo;
+    private Cargo cargo;
 
-    public Funcionario(String name, double salarioBase, String departamento, String cargo) {
+    public Funcionario(String name, double salarioBase, String departamento, Cargo cargo) {
         this.name = name;
         this.salarioBase = salarioBase;
         this.departamento = departamento;
-        Cargo = cargo;
+        this.cargo = cargo;
+    }
+
+    @Override
+    public String toString() {
+        return "name: \'"+this.name+"\' ,\n"+"Salario: "+calcularSalario()+"\n"+"Cargo: "+cargo.getCargo()+ "";
     }
 
     public abstract double calcularSalario();
@@ -25,3 +31,6 @@ public abstract class Funcionario {
 
 
 }
+
+
+// O domain são basicamente as entidades do nosso projeto
