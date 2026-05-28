@@ -16,15 +16,13 @@ public class Main{
         departamento1.addAployees(dev1);
         departamento1.addAployees(dev2);
         departamento1.addAployees(ger1);
-        //departamento1.listArray();
-        //System.out.println("---------------------------------------");
+
         Gerente ger2 = new Gerente("Clodovaldo",5000,departamento2,Cargo.GERENTE);
         Estagiario estagiario = new Estagiario("Robinho",1600,departamento2,Cargo.ESTAGIARIO);
         Estagiario estagiario1 = new Estagiario("Luciene",2000,departamento2,Cargo.ESTAGIARIO);
         departamento2.addAployees(ger2);
         departamento2.addAployees(estagiario1);
         departamento2.addAployees(estagiario);
-       // departamento2.listArray();
 
         /// usando o service:
 
