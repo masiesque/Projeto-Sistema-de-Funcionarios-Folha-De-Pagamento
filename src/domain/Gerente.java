@@ -4,7 +4,7 @@ import enums.Cargo;
 
 public class Gerente extends Funcionario implements Antenticacao {
     private static final double EXTRA = 3000;
-    public Gerente(String name, double salarioBase, String departamento, Cargo cargo) {
+    public Gerente(String name, double salarioBase, Departamento departamento, Cargo cargo) {
         super(name, salarioBase, departamento, cargo);
     }
 

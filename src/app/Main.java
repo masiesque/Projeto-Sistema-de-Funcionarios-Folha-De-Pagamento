@@ -1,17 +1,22 @@
 package app;
+import domain.*;
+import enums.Cargo;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
+public class Main{
+
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Departamento departamento1 = new Departamento("Centro de tecnologia");
+        Dev dev1 = new Dev("Breno",15000,departamento1,Cargo.DEV);
+        Dev dev2 = new Dev("Jurema",20000,departamento1,Cargo.DEV);
+        Gerente ger1 = new Gerente("Geraldo", 30000,departamento1,Cargo.GERENTE);
+
+        departamento1.addAployees(dev1);
+        departamento1.addAployees(dev2);
+        departamento1.addAployees(ger1);
+
+        departamento1.listArray();
+
     }
 }
+

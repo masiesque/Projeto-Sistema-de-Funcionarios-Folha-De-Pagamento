@@ -4,10 +4,10 @@ import enums.Cargo;
 public abstract class Funcionario  {
     private String name;
     private double salarioBase;
-    private String departamento;
+    private Departamento departamento;
     private Cargo cargo;
 
-    public Funcionario(String name, double salarioBase, String departamento, Cargo cargo) {
+    public Funcionario(String name, double salarioBase, Departamento departamento, Cargo cargo) {
         this.name = name;
         this.salarioBase = salarioBase;
         this.departamento = departamento;
@@ -26,10 +26,20 @@ public abstract class Funcionario  {
     {
         return this.salarioBase;
     }
+
+    public String getName() {
+        return name;
+    }
+
+//    //public String getDepartamento() {
+//        return departamento;
+//    }
+
+    public Cargo getCargo() {
+        return cargo;
+    }
+
     //getters
-
-
-
 }
 
 
