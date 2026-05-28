@@ -31,4 +31,9 @@ public class Departamento {
         return  funcionarios;
     }
 
+    public String getName()
+    {
+        return this.name;
+    }
+
 }
